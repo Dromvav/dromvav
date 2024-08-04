@@ -10,8 +10,8 @@ body {
 }
 
 header {
-    background: #61769d;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
     padding: 1rem 0;
     text-align: center;
 }
@@ -45,8 +45,8 @@ section {
 
 footer {
     text-align: center;
-    background: #61769d;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
     padding: 1rem 0;
     position: fixed;
     bottom: 0;
