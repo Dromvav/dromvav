@@ -1,3 +1,4 @@
+/* Grundläggande stilar */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif; /* Använder Helvetica Neue och fallback till Arial och sans-serif */
     margin: 0;
@@ -21,9 +22,26 @@ header .container {
 header .logo {
     color: #000000;
     text-decoration: none;
-    font-size: 1.5em; /* Mindre storlek */
+    font-size: 3em; /* Större storlek för titeln */
     font-weight: bold;
     padding-top: 10px; /* Utrymme ovanför titeln */
+    position: relative; /* För att kunna använda pseudo-element för understrykning */
+}
+
+header .logo::after {
+    content: ""; /* Innehåll för pseudo-elementet */
+    display: block; /* Gör det till ett block-element */
+    width: 0; /* Startbredden av understrykningen är 0 */
+    height: 2px; /* Höjd på understrykningen */
+    background: #000000; /* Färg på understrykningen */
+    position: absolute; /* Positionera understrykningen absolut */
+    bottom: -5px; /* Placera understrykningen strax under titeln */
+    left: 0; /* Starta understrykningen från vänsterkant av titeln */
+    transition: width 0.3s ease; /* Lägg till en övergångseffekt för bredden */
+}
+
+header .logo:hover::after {
+    width: 100%; /* När man hovrar, bredda understrykningen till hela bredden på titeln */
 }
 
 header nav {
@@ -66,6 +84,24 @@ header nav ul li a::after {
 
 header nav ul li a:hover::after {
     width: 100%; /* När man hovrar, bredda understrykningen till hela bredden på länken */
+}
+
+header nav ul li a.active {
+    position: relative; /* För att använda pseudo-element för cirkelmarkering */
+    padding: 5px 0; /* Lägg till padding för cirkelmarkering */
+}
+
+header nav ul li a.active::before {
+    content: ""; /* Innehåll för pseudo-elementet */
+    display: block; /* Gör det till ett block-element */
+    width: 10px; /* Diameter på cirkeln */
+    height: 10px; /* Diameter på cirkeln */
+    border-radius: 50%; /* Gör det till en cirkel */
+    background: #000000; /* Färg på cirkeln */
+    position: absolute; /* Positionera cirkeln absolut */
+    bottom: -15px; /* Placera cirkeln strax under länken */
+    left: 50%; /* Centrera cirkeln horisontellt i länken */
+    transform: translateX(-50%); /* Justera positionen till att vara exakt i mitten */
 }
 
 #hero {
