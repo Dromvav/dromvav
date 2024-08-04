@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #000000;
 }
 
 header {
-    background: #444;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
     padding: 10px 0;
 }
 
@@ -96,20 +96,20 @@ form input, form textarea {
 
 form button {
     padding: 10px 20px;
-    background: #444;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 form button:hover {
-    background: #555;
+    background: #ffffff;
 }
 
 footer {
-    background: #222;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
     text-align: center;
     padding: 20px 0;
 }
