@@ -50,61 +50,18 @@ header nav ul li a {
     text-decoration: none;
 }
 
+#hero {
+    background: #ffffff;
+    text-align: center;
+    padding: 20px 0; /* Justera padding för att passa den nya storleken på videon */
+}
+
 #hero iframe {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Gör videon 100% av föräldraelementets bredd */
+    height: auto; /* Håller förhållandet mellan bredd och höjd */
+    max-width: 1200px; /* Sätter en maxbredd för att förhindra att videon blir för stor på stora skärmar */
     display: block;
     margin: 0 auto; /* Centrerar videon horisontellt */
-}
-
-#hero h2 {
-    margin: 0;
-    font-size: 3em;
-}
-
-#portfolio, #clients, #contact {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.portfolio-items, .client-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.portfolio-item, .client-logos img {
-    margin: 15px;
-    max-width: 100%;
-}
-
-.portfolio-item {
-    flex: 1 1 300px;
-    text-align: center;
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-}
-
-.contact-details {
-    text-align: center;
-    padding: 20px;
-}
-
-.contact-details p {
-    margin: 10px 0;
-}
-
-.contact-details a {
-    color: #000000;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.contact-details a:hover {
-    text-decoration: underline;
 }
 
 footer {
