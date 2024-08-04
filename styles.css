@@ -27,6 +27,22 @@ header .logo {
     position: relative; /* Gör så att cirkeln kan placeras relativt till titeln */
 }
 
+header .logo::after {
+    content: ""; /* Innehåll för pseudo-elementet */
+    display: block; /* Gör det till ett block-element */
+    width: 0; /* Startbredden av understrykningen är 0 */
+    height: 2px; /* Höjd på understrykningen */
+    background: #000000; /* Färg på understrykningen */
+    position: absolute; /* Positionera understrykningen absolut */
+    bottom: -5px; /* Placera understrykningen strax under titeln */
+    left: 0; /* Starta understrykningen från vänsterkant av länken */
+    transition: width 0.3s ease; /* Lägg till en övergångseffekt för bredden */
+}
+
+header .logo:hover::after {
+    width: 100%; /* När man hovrar, bredda understrykningen till hela bredden på länken */
+}
+
 header nav {
     width: 100%; /* Fyller hela bredden */
     text-align: center; /* Centrera navigeringslänkar */
@@ -85,7 +101,7 @@ header nav ul li a.active::before {
     left: 50%; /* Centrera cirkeln horisontellt */
     transform: translateX(-50%); /* Justera centreringspositionen */
     width: 30px; /* Diameter på cirkeln */
-    height: 30px; /* Diameter på cirkeln */
+    height: 10px; /* Diameter på cirkeln */
     border-radius: 50%; /* Gör elementet till en cirkel */
     background: #000000; /* Bakgrundsfärg på cirkeln */
     border: 2px solid #ffffff; /* Vit kantlinje runt cirkeln (valfritt) */
