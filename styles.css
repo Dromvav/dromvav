@@ -21,11 +21,12 @@ header .container {
 header .logo {
     color: #000000;
     text-decoration: none;
-    font-size: 3em; /* Dubbelt så stor */
-    font-weight: bold; /* Fetstil */
+    font-size: 2.5em; /* Mindre storlek */
+    font-weight: bold;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    padding-top: 10px; /* Utrymme ovanför titeln */
 }
 
 header nav {
