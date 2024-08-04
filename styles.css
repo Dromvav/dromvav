@@ -100,8 +100,8 @@ header nav ul li a.active::before {
     bottom: -15px; /* Placera cirkeln nedanför länken */
     left: 50%; /* Centrera cirkeln horisontellt */
     transform: translateX(-50%); /* Justera centreringspositionen */
-    width: 30px; /* Diameter på cirkeln */
-    height: 10px; /* Diameter på cirkeln */
+    width: 5px; /* Diameter på cirkeln */
+    height: 5px; /* Diameter på cirkeln */
     border-radius: 50%; /* Gör elementet till en cirkel */
     background: #000000; /* Bakgrundsfärg på cirkeln */
     border: 2px solid #ffffff; /* Vit kantlinje runt cirkeln (valfritt) */
