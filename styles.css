@@ -50,15 +50,25 @@ header nav ul li a {
     text-decoration: none;
 }
 
+#hero {
+    background: #ffffff;
+    text-align: center;
+    padding: 0; /* Ta bort padding så att videon kan använda hela utrymmet */
+    margin: 0; /* Ta bort margin för att maximera utrymmet */
+}
+
 #hero iframe {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Gör videon 100% av bredden på föräldraelementet */
+    height: 75vh; /* Höjd på videon baserat på viewport höjd */
+    max-width: 1200px; /* Sätter en maxbredd för att förhindra att videon blir för stor på stora skärmar */
+    border: none; /* Ta bort kantlinje för att undvika oönskade linjer runt videon */
+    object-fit: cover; /* Gör att videon täcker hela elementet utan att förändra proportioner */
     display: block;
     margin: 0 auto; /* Centrerar videon horisontellt */
 }
 
 #hero h2 {
-    margin: 0;
+    margin: 20px 0; /* Lägg till mellanrum ovanför och under rubriken för bättre layout */
     font-size: 3em;
 }
 
