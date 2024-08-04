@@ -21,7 +21,7 @@ header .container {
 header .logo {
     color: #000000;
     text-decoration: none;
-    font-size: 2.5em; /* Mindre storlek */
+    font-size: 1.5em; /* Mindre storlek (x0.5) */
     font-weight: bold;
     position: absolute;
     left: 50%;
@@ -88,36 +88,23 @@ header nav ul li a {
     height: auto;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contact-details {
+    text-align: center;
+    padding: 20px;
 }
 
-form label {
-    margin: 10px 0 5px;
+.contact-details p {
+    margin: 10px 0;
 }
 
-form input, form textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px 20px;
-    background: #ffffff;
+.contact-details a {
     color: #000000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-form button:hover {
-    background: #ffffff;
+.contact-details a:hover {
+    text-decoration: underline;
 }
 
 footer {
