@@ -21,9 +21,9 @@ header .container {
 header .logo {
     color: #000000;
     text-decoration: none;
-    font-size: 1.5em; /* Mindre storlek */
+    font-size: 3em; /* Öka storleken på titeln */
     font-weight: bold;
-    padding-top: 10px; /* Utrymme ovanför titeln */
+    padding-top: 20px; /* Mellanrum ovanför titeln */
 }
 
 header nav {
