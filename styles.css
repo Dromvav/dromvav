@@ -13,8 +13,8 @@ header {
 
 header .container {
     display: flex;
-    flex-direction: column; /* Byta till kolumnlayout för mobil */
-    align-items: center;
+    flex-direction: column; /* För att lägga navigeringsraden under titeln på mobil */
+    align-items: center; /* Centrera både titeln och navigeringsraden */
     position: relative;
 }
 
@@ -28,8 +28,8 @@ header .logo {
 
 header nav {
     width: 100%; /* Fyller hela bredden */
-    text-align: center; /* Centrerar texten */
-    padding-top: 10px; /* Utrymme ovanför navigeringsraden */
+    text-align: center; /* Centrera navigeringslänkar */
+    padding-top: 20px; /* Mellanrum mellan titeln och navigeringsraden */
 }
 
 header nav ul {
@@ -42,7 +42,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-left: 20px; /* Utrymme mellan länkarna */
+    margin: 0 10px; /* Utrymme mellan länkarna */
 }
 
 header nav ul li a {
@@ -118,6 +118,10 @@ footer {
 @media (max-width: 768px) {
     header .container {
         flex-direction: column; /* För att navigeringsraden ska vara under titeln */
+    }
+
+    header .logo {
+        margin-bottom: 20px; /* Mellanrum mellan titeln och navigeringsraden */
     }
 
     header nav {
