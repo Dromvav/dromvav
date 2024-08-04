@@ -47,7 +47,25 @@ header nav ul li {
 
 header nav ul li a {
     color: #000000;
-    text-decoration: none;
+    text-decoration: none; /* Tar bort standardunderstrykning */
+    position: relative; /* Gör att pseudo-elementet kan placeras relativt till länken */
+    padding: 5px 0; /* Lägg till lite padding för att ge utrymme åt understrykningen */
+}
+
+header nav ul li a::after {
+    content: ""; /* Innehåll för pseudo-elementet */
+    display: block; /* Gör det till ett block-element */
+    width: 0; /* Startbredden av understrykningen är 0 */
+    height: 2px; /* Höjd på understrykningen */
+    background: #000000; /* Färg på understrykningen */
+    position: absolute; /* Positionera understrykningen absolut */
+    bottom: 0; /* Placera understrykningen längst ner i länken */
+    left: 0; /* Starta understrykningen från vänsterkant av länken */
+    transition: width 0.3s ease; /* Lägg till en övergångseffekt för bredden */
+}
+
+header nav ul li a:hover::after {
+    width: 100%; /* När man hovrar, bredda understrykningen till hela bredden på länken */
 }
 
 #hero {
