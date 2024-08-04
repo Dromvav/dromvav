@@ -13,21 +13,24 @@ header {
 
 header .container {
     display: flex;
-    justify-content: center; /* Ändrad från space-between till center */
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 header .logo {
     color: #000000;
     text-decoration: none;
-    font-size: 1.5em;
-    position: absolute; /* Gör så att logon stannar centrerad */
+    font-size: 3em; /* Dubbelt så stor */
+    font-weight: bold; /* Fetstil */
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
 header nav {
-    margin-left: auto; /* Flytta navigeringsmenyn längre till vänster */
+    margin-left: auto;
+    padding-right: 20px; /* Ger utrymme mellan skärmgränsen och "Kontakt" */
 }
 
 header nav ul {
