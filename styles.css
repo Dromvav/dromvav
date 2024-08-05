@@ -191,10 +191,12 @@ header nav ul li a.active::before {
     }
 
     .portfolio-categories {
-        padding: 10px 0; /* Lägger till mer padding för att förhindra avhuggning */
+        padding: 10px 0;
     }
 
     .portfolio-categories a {
         margin: 0 5px; /* Minskar margin för att få plats med fler kategorier */
+        font-size: 0.9em; /* Minskar textstorleken för att få plats med fler kategorier */
+        padding: 5px; /* Minskar padding för att få plats med fler kategorier */
     }
 }
