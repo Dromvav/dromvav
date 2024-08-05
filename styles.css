@@ -129,11 +129,11 @@ header nav ul li a.active::before {
 
 .portfolio-categories {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Justera från början för att förhindra att kategorier skärs av */
     margin-bottom: 20px;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 10px 0; /* Lägger till padding för att förhindra att texten kapas */
+    padding: 10px 0;
 }
 
 .portfolio-categories a {
@@ -144,7 +144,7 @@ header nav ul li a.active::before {
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
     display: inline-block;
-    white-space: nowrap; /* Förhindrar att texten bryts */
+    white-space: nowrap;
 }
 
 .portfolio-categories a.active,
@@ -192,11 +192,13 @@ header nav ul li a.active::before {
 
     .portfolio-categories {
         padding: 10px 0;
+        overflow-x: auto; /* Gör kategorierna skrollbara */
+        -webkit-overflow-scrolling: touch; /* För smidigare skrollning på mobila enheter */
     }
 
     .portfolio-categories a {
-        margin: 0 5px; /* Minskar margin för att få plats med fler kategorier */
-        font-size: 0.9em; /* Minskar textstorleken för att få plats med fler kategorier */
-        padding: 5px; /* Minskar padding för att få plats med fler kategorier */
+        margin: 0 10px;
+        font-size: 1em; /* Justerar textstorleken */
+        padding: 5px; 
     }
 }
