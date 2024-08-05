@@ -24,28 +24,42 @@
         <section id="portfolio">
             <div class="container">
                 <h2>Portfolio</h2>
-                <div class="portfolio-items">
-                    <div class="portfolio-item">
-                        <img src="video1.jpg" alt="Reklamvideo">
-                        <h3>Reklamvideo</h3>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="video2.jpg" alt="Musikvideo">
-                        <h3>Musikvideo</h3>
-                    </div>
-                    <div class="portfolio-item">
+                <div class="portfolio-categories">
+                    <a href="#" class="category active" data-category="wedding">Bröllopsfoto</a>
+                    <a href="#" class="category" data-category="event">Eventfoto</a>
+                    <a href="#" class="category" data-category="commercial">Reklamfoto</a>
+                    <a href="#" class="category" data-category="music">Musikvideo</a>
+                    <a href="#" class="category" data-category="advert">Reklamvideo</a>
+                    <a href="#" class="category" data-category="audio">Ljudteknik</a>
+                </div>
+                <div class="portfolio-gallery">
+                    <!-- Bröllopsfoto -->
+                    <div class="portfolio-item" data-category="wedding">
                         <img src="photo1.jpg" alt="Bröllopsfoto">
                         <h3>Bröllopsfoto</h3>
                     </div>
-                    <div class="portfolio-item">
+                    <!-- Eventfoto -->
+                    <div class="portfolio-item" data-category="event" style="display: none;">
                         <img src="photo2.jpg" alt="Eventfoto">
                         <h3>Eventfoto</h3>
                     </div>
-                    <div class="portfolio-item">
+                    <!-- Reklamfoto -->
+                    <div class="portfolio-item" data-category="commercial" style="display: none;">
                         <img src="photo3.jpg" alt="Reklamfoto">
                         <h3>Reklamfoto</h3>
                     </div>
-                    <div class="portfolio-item">
+                    <!-- Musikvideo -->
+                    <div class="portfolio-item" data-category="music" style="display: none;">
+                        <img src="video2.jpg" alt="Musikvideo">
+                        <h3>Musikvideo</h3>
+                    </div>
+                    <!-- Reklamvideo -->
+                    <div class="portfolio-item" data-category="advert" style="display: none;">
+                        <img src="video1.jpg" alt="Reklamvideo">
+                        <h3>Reklamvideo</h3>
+                    </div>
+                    <!-- Ljudteknik -->
+                    <div class="portfolio-item" data-category="audio" style="display: none;">
                         <img src="audio1.jpg" alt="Ljudteknik">
                         <h3>Ljudteknik</h3>
                     </div>
@@ -58,5 +72,35 @@
             <p>&copy; 2024 Drömväv. Alla rättigheter reserverade.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const categories = document.querySelectorAll('.portfolio-categories .category');
+            const items = document.querySelectorAll('.portfolio-gallery .portfolio-item');
+
+            categories.forEach(category => {
+                category.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Remove active class from all categories
+                    categories.forEach(cat => cat.classList.remove('active'));
+                    // Add active class to clicked category
+                    this.classList.add('active');
+
+                    // Get the category to show
+                    const categoryToShow = this.getAttribute('data-category');
+
+                    // Show items of the selected category and hide others
+                    items.forEach(item => {
+                        if (item.getAttribute('data-category') === categoryToShow) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
