@@ -133,6 +133,7 @@ header nav ul li a.active::before {
     margin-bottom: 20px;
     overflow-x: auto;
     white-space: nowrap;
+    padding: 10px 0; /* Lägger till padding för att förhindra att texten kapas */
 }
 
 .portfolio-categories a {
@@ -143,6 +144,7 @@ header nav ul li a.active::before {
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
     display: inline-block;
+    white-space: nowrap; /* Förhindrar att texten bryts */
 }
 
 .portfolio-categories a.active,
@@ -186,5 +188,13 @@ header nav ul li a.active::before {
     header nav ul li a::after,
     header nav ul li a:hover::after {
         display: none;
+    }
+
+    .portfolio-categories {
+        padding: 10px 0; /* Lägger till mer padding för att förhindra avhuggning */
+    }
+
+    .portfolio-categories a {
+        margin: 0 5px; /* Minskar margin för att få plats med fler kategorier */
     }
 }
