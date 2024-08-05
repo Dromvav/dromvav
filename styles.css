@@ -195,13 +195,18 @@ header nav ul li a.active::before {
     }
 
     .portfolio-categories {
-        padding: 10px 0;
+        display: block;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        text-align: left;
+        padding: 10px;
+        margin-bottom: 0; /* Adjust this if you want some space below the categories */
     }
 
     .portfolio-categories a {
-        margin: 0 10px;
+        display: inline-block;
+        margin: 0 5px;
         font-size: 1em;
         padding: 5px;
     }
