@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Använder Helvetica Neue och fallback till Arial och sans-serif */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #000000;
@@ -13,40 +13,40 @@ header {
 
 header .container {
     display: flex;
-    flex-direction: column; /* För att lägga navigeringsraden under titeln på mobil */
-    align-items: center; /* Centrera både titeln och navigeringsraden */
+    flex-direction: column;
+    align-items: center;
     position: relative;
 }
 
 header .logo {
     color: #000000;
     text-decoration: none;
-    font-size: 2em; /* Större storlek för titeln */
+    font-size: 2em;
     font-weight: bold;
-    padding-top: 20px; /* Utrymme ovanför titeln */
-    position: relative; /* Gör så att cirkeln kan placeras relativt till titeln */
+    padding-top: 20px;
+    position: relative;
 }
 
 header .logo::after {
-    content: ""; /* Innehåll för pseudo-elementet */
-    display: block; /* Gör det till ett block-element */
-    width: 0; /* Startbredden av understrykningen är 0 */
-    height: 2px; /* Höjd på understrykningen */
-    background: #000000; /* Färg på understrykningen */
-    position: absolute; /* Positionera understrykningen absolut */
-    bottom: -5px; /* Placera understrykningen strax under titeln */
-    left: 0; /* Starta understrykningen från vänsterkant av länken */
-    transition: width 0.3s ease; /* Lägg till en övergångseffekt för bredden */
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
 }
 
 header .logo:hover::after {
-    width: 100%; /* När man hovrar, bredda understrykningen till hela bredden på länken */
+    width: 100%;
 }
 
 header nav {
-    width: 100%; /* Fyller hela bredden */
-    text-align: center; /* Centrera navigeringslänkar */
-    padding-top: 20px; /* Mellanrum mellan titeln och navigeringsraden */
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
 }
 
 header nav ul {
@@ -54,79 +54,71 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centrera navigeringslänkar horisontellt */
-    flex-wrap: wrap; /* Tillåter radbrytning vid behov */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
-    margin: 0 10px; /* Utrymme mellan länkarna */
-    position: relative; /* Gör att pseudo-elementet kan placeras relativt till länken */
+    margin: 0 10px;
+    position: relative;
 }
 
 header nav ul li a {
     color: #000000;
-    text-decoration: none; /* Tar bort standardunderstrykning */
-    position: relative; /* Gör att pseudo-elementet kan placeras relativt till länken */
-    padding: 5px 0; /* Lägg till lite padding för att ge utrymme åt understrykningen */
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
 }
 
 header nav ul li a::after {
-    content: ""; /* Innehåll för pseudo-elementet */
-    display: block; /* Gör det till ett block-element */
-    width: 0; /* Startbredden av understrykningen är 0 */
-    height: 2px; /* Höjd på understrykningen */
-    background: #000000; /* Färg på understrykningen */
-    position: absolute; /* Positionera understrykningen absolut */
-    bottom: 0; /* Placera understrykningen längst ner i länken */
-    left: 0; /* Starta understrykningen från vänsterkant av länken */
-    transition: width 0.3s ease; /* Lägg till en övergångseffekt för bredden */
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
 }
 
 header nav ul li a:hover::after {
-    width: 100%; /* När man hovrar, bredda understrykningen till hela bredden på länken */
+    width: 100%;
 }
 
-/* Stil för aktiv navigeringslänk */
-header nav ul li a.active {
-    position: relative; /* Gör att pseudo-elementet kan placeras absolut */
-    padding: 10px; /* Extra utrymme för cirkeln */
-    color: #000000; /* Textfärg för aktiv länk */
-}
-
-/* Skapa cirkel runt aktiv länk */
 header nav ul li a.active::before {
-    content: ""; /* Innehåll för pseudo-elementet */
-    position: absolute; /* Positionera absolut i förhållande till länken */
-    bottom: -15px; /* Placera cirkeln nedanför länken */
-    left: 50%; /* Centrera cirkeln horisontellt */
-    transform: translateX(-50%); /* Justera centreringspositionen */
-    width: 5px; /* Diameter på cirkeln */
-    height: 5px; /* Diameter på cirkeln */
-    border-radius: 50%; /* Gör elementet till en cirkel */
-    background: #000000; /* Bakgrundsfärg på cirkeln */
-    border: 2px solid #ffffff; /* Vit kantlinje runt cirkeln (valfritt) */
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #000000;
+    border: 2px solid #ffffff;
 }
 
 /* Stil för hero-sektionen */
 #hero {
     background: #ffffff;
     text-align: center;
-    padding: 0; /* Ta bort padding så att videon kan använda hela utrymmet */
-    margin: 0; /* Ta bort margin för att maximera utrymmet */
+    padding: 0;
+    margin: 0;
 }
 
 #hero iframe {
-    width: 100%; /* Gör videon 100% av bredden på föräldraelementet */
-    height: 75vh; /* Höjd på videon baserat på viewport höjd */
-    max-width: 1200px; /* Sätter en maxbredd för att förhindra att videon blir för stor på stora skärmar */
-    border: none; /* Ta bort kantlinje för att undvika oönskade linjer runt videon */
-    object-fit: cover; /* Gör att videon täcker hela elementet utan att förändra proportioner */
+    width: 100%;
+    height: 75vh;
+    max-width: 1200px;
+    border: none;
+    object-fit: cover;
     display: block;
-    margin: 0 auto; /* Centrerar videon horisontellt */
+    margin: 0 auto;
 }
 
 #hero h2 {
-    margin: 20px 0; /* Lägg till mellanrum ovanför och under rubriken för bättre layout */
+    margin: 20px 0;
     font-size: 3em;
 }
 
@@ -135,64 +127,55 @@ header nav ul li a.active::before {
     text-align: center;
 }
 
-.portfolio-items, .client-logos {
+.portfolio-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-categories a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-categories a.active,
+.portfolio-categories a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.portfolio-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.portfolio-item, .client-logos img {
-    margin: 15px;
-    max-width: 100%;
-}
-
-.portfolio-item {
+.portfolio-gallery .portfolio-item {
     flex: 1 1 300px;
+    margin: 15px;
     text-align: center;
 }
 
-.portfolio-item img {
+.portfolio-gallery .portfolio-item img {
     width: 100%;
     height: auto;
-}
-
-.contact-details {
-    text-align: center;
-    padding: 20px;
-}
-
-.contact-details p {
-    margin: 10px 0;
-}
-
-.contact-details a {
-    color: #000000;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.contact-details a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background: #ffffff;
-    color: #000000;
-    text-align: center;
-    padding: 20px 0;
 }
 
 /* Media query för mobilversionen */
 @media (max-width: 768px) {
     header .container {
-        flex-direction: column; /* För att navigeringsraden ska vara under titeln */
+        flex-direction: column;
     }
 
     header .logo {
-        margin-bottom: 20px; /* Mellanrum mellan titeln och navigeringsraden */
+        margin-bottom: 20px;
     }
 
     header nav {
-        padding-top: 0; /* Ta bort extra utrymme ovanför navigeringsraden */
+        padding-top: 0;
     }
 }
