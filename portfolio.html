@@ -25,35 +25,35 @@
             <div class="container">
                 <h2>Portfolio</h2>
                 <div class="portfolio-categories">
-                    <a href="#bröllopsfoto" class="active">Bröllopsfoto</a>
-                    <a href="#eventfoto">Eventfoto</a>
-                    <a href="#reklamfoto">Reklamfoto</a>
-                    <a href="#musikvideo">Musikvideo</a>
-                    <a href="#reklamvideo">Reklamvideo</a>
-                    <a href="#ljudteknik">Ljudteknik</a>
+                    <a href="#bröllopsfoto" class="category active" data-category="bröllopsfoto">Bröllopsfoto</a>
+                    <a href="#eventfoto" class="category" data-category="eventfoto">Eventfoto</a>
+                    <a href="#reklamfoto" class="category" data-category="reklamfoto">Reklamfoto</a>
+                    <a href="#musikvideo" class="category" data-category="musikvideo">Musikvideo</a>
+                    <a href="#reklamvideo" class="category" data-category="reklamvideo">Reklamvideo</a>
+                    <a href="#ljudteknik" class="category" data-category="ljudteknik">Ljudteknik</a>
                 </div>
                 <div class="portfolio-gallery">
-                    <div class="portfolio-item">
+                    <div class="portfolio-item" data-category="bröllopsfoto">
                         <img src="photo1.jpg" alt="Bröllopsfoto">
                         <h3>Bröllopsfoto</h3>
                     </div>
-                    <div class="portfolio-item">
+                    <div class="portfolio-item" data-category="eventfoto">
                         <img src="photo2.jpg" alt="Eventfoto">
                         <h3>Eventfoto</h3>
                     </div>
-                    <div class="portfolio-item">
+                    <div class="portfolio-item" data-category="reklamfoto">
                         <img src="photo3.jpg" alt="Reklamfoto">
                         <h3>Reklamfoto</h3>
                     </div>
-                    <div class="portfolio-item">
+                    <div class="portfolio-item" data-category="musikvideo">
                         <img src="video1.jpg" alt="Musikvideo">
                         <h3>Musikvideo</h3>
                     </div>
-                    <div class="portfolio-item">
+                    <div class="portfolio-item" data-category="reklamvideo">
                         <img src="video2.jpg" alt="Reklamvideo">
                         <h3>Reklamvideo</h3>
                     </div>
-                    <div class="portfolio-item">
+                    <div class="portfolio-item" data-category="ljudteknik">
                         <img src="audio1.jpg" alt="Ljudteknik">
                         <h3>Ljudteknik</h3>
                     </div>
@@ -66,5 +66,36 @@
             <p>&copy; 2024 Drömväv. Alla rättigheter reserverade.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categories = document.querySelectorAll('.portfolio-categories a');
+            const items = document.querySelectorAll('.portfolio-item');
+
+            function filterItems(category) {
+                items.forEach(item => {
+                    if (item.getAttribute('data-category') === category || category === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            categories.forEach(category => {
+                category.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    categories.forEach(cat => cat.classList.remove('active'));
+                    category.classList.add('active');
+                    const selectedCategory = category.getAttribute('data-category');
+                    filterItems(selectedCategory);
+                });
+            });
+
+            // Default to showing all items initially or Bröllopsfoto
+            const activeCategory = document.querySelector('.portfolio-categories a.active');
+            filterItems(activeCategory ? activeCategory.getAttribute('data-category') : 'bröllopsfoto');
+        });
+    </script>
 </body>
 </html>
